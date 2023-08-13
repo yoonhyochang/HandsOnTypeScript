@@ -10,4 +10,4 @@ let runner: Run = function (miles: number): boolean {
 }
 
 // 'runner' 함수에 9를 인자로 넘겨주면, 10보다 작으므로 false를 반환한다.
-console.log(runner(9)); // 출력 결과: false
+console.log(runner(9)); // 출력 결과: false 
