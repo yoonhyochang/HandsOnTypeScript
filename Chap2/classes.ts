@@ -1,11 +1,12 @@
 class Person {
-    constructor() {}
+    constructor(private readonly msg: string) {}
     msg: string;
     speak () {
+        this.msg = "speak " + this.msg;
         console.log(this.msg);
     }
 }
 
-const tom = new Person();
-tom.msg = "hello";
+const tom = new Person("hello");
+// tom.msg = "hello";
 tom.speak();
