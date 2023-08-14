@@ -1,35 +1,22 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var NamespaceA;
 (function (NamespaceA) {
-    var A = /** @class */ (function () {
-        function A() {
+    class A {
+        constructor() {
             this.aname = "A";
         }
-        return A;
-    }());
-    var B = /** @class */ (function () {
-        function B() {
+    }
+    class B {
+        constructor() {
             this.bname = "B";
         }
-        return B;
-    }());
-    var a = new A();
-    var b = new B();
-    var c = __assign(__assign({}, a), b);
-    var d = Object.assign(a, b);
-    console.log(c);
-    console.log(d);
-    a.aname = "a1";
-    console.log(c);
-    console.log(d);
+    }
+    const a = new A();
+    const b = new B();
+    const c = Object.assign(Object.assign({}, a), b); // a와 b를 결합한 새 객체
+    const d = Object.assign(a, b); // a에 b의 속성을 병합
+    console.log(c); // 초기 c 출력
+    console.log(d); // 초기 d 출력
+    a.aname = "a1"; // a 수정
+    console.log(c); // 수정 전 c 출력
+    console.log(d); // 수정된 a가 반영된 d 출력
 })(NamespaceA || (NamespaceA = {}));
