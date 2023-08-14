@@ -21,7 +21,7 @@ function getLength<T extends HasLength>(arg: T): number {
 }
 
 // 아래 줄은 컴파일 에러를 발생시킬 것입니다. number 타입은 HasLength 인터페이스를 충족시키지 않기 때문입니다.
-console.log(getLength<number>(22));
+// console.log(getLength<number>(22));
 
 // 문자열은 length 속성을 가지고 있으므로, 이 호출은 문자열의 길이인 13을 출력합니다.
 console.log(getLength("Hello world."));
