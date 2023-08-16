@@ -1,4 +1,4 @@
-# HandsOnTypeScript
+# TypeScript
 
 1. 터미널 창에 npm int 입력 후 초기화
 2. npm init -y 입력 후 모두 기본값으로 처리
